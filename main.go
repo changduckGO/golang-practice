@@ -5,6 +5,10 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello World!")
-	something.SayHello()
+	const e_name string = "HARRY"
+	fmt.Println(e_name)
+
+	k_name := "CD" // var k_name string = "CD"
+	k_name = "SCD"
+	fmt.Println(k_name)
 }
