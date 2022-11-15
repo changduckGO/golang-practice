@@ -2,13 +2,22 @@
 // 컴파일하지 않고 다른 사람과의 공유 등의 목적이라면 파일 이름 상관없음
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+func lenAndUpper(name string) (int, string) {
+	return len(name), strings.ToUpper(name)
+}
+
+func repeatMe(words ...string) {
+	fmt.Println(words)
+}
 
 func main() {
-	const e_name string = "HARRY"
-	fmt.Println(e_name)
+	totalLength, upperName := lenAndUpper("changduck")
+	fmt.Println(totalLength, upperName)
 
-	k_name := "CD" // var k_name string = "CD"
-	k_name = "SCD"
-	fmt.Println(k_name)
+	repeatMe("cd", "harry", "SCD", "duck")
 }
