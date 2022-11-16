@@ -4,17 +4,18 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
-func lenAndUpper(name string) (lenght int, upperName string) {
-	defer fmt.Println("I'm done!")
-	lenght = len(name)
-	upperName = strings.ToUpper(name)
-	return
+func superADD(numbers ...int) int {
+	total := 0
+	for _, number := range numbers { // go에서 range는 index와 element를 반환해줌(python에서 enumerate와 같은 역할)
+		total += number
+	}
+
+	return total
 }
 
 func main() {
-	totalLength, upperName := lenAndUpper("changduck")
-	fmt.Println(totalLength, upperName)
+	total_sum := superADD(1, 2, 3, 4, 5, 6, 7)
+	fmt.Println(total_sum)
 }
