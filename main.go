@@ -7,13 +7,15 @@ import (
 )
 
 func canIDrink(age int) bool {
-	if koreanAge := age + 2; koreanAge < 20 {
-		fmt.Println("한국 나이: ", koreanAge)
+	switch koreanAge := age + 2; koreanAge {
+	case 10:
 		return false
+	case 20:
+		return true
 	}
-	return true
+	return false
 }
 
 func main() {
-	fmt.Println(canIDrink(16))
+	fmt.Println(canIDrink(18))
 }
