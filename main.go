@@ -6,16 +6,14 @@ import (
 	"fmt"
 )
 
-func superADD(numbers ...int) int {
-	total := 0
-	for _, number := range numbers { // go에서 range는 index와 element를 반환해줌(python에서 enumerate와 같은 역할)
-		total += number
+func canIDrink(age int) bool {
+	if koreanAge := age + 2; koreanAge < 20 {
+		fmt.Println("한국 나이: ", koreanAge)
+		return false
 	}
-
-	return total
+	return true
 }
 
 func main() {
-	total_sum := superADD(1, 2, 3, 4, 5, 6, 7)
-	fmt.Println(total_sum)
+	fmt.Println(canIDrink(16))
 }
