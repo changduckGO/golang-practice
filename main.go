@@ -7,10 +7,7 @@ import (
 )
 
 func main() {
-	// &: 메모리 주소를 확인
-	// *: 해당 주소에 있는 값을 살펴보기
-	a := 97
-	b := &a
-	*b = 200
-	fmt.Println(a)
+	names := []string{"HARRY", "SCD", "CHANGDUCK"} // length를 빈칸으로 해줌으로써 Slice 객체 생성
+	names = append(names, "HARRY4DUCK")            // append arguments: Slice, 추가할 요소
+	fmt.Println(names)
 }
