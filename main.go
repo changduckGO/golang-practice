@@ -6,16 +6,9 @@ import (
 	"fmt"
 )
 
-func canIDrink(age int) bool {
-	switch koreanAge := age + 2; koreanAge {
-	case 10:
-		return false
-	case 20:
-		return true
-	}
-	return false
-}
-
 func main() {
-	fmt.Println(canIDrink(18))
+	a := 97
+	b := &a
+	*b = 200
+	fmt.Println(a)
 }
