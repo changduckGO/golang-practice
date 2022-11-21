@@ -7,7 +7,9 @@ import (
 )
 
 func main() {
-	names := []string{"HARRY", "SCD", "CHANGDUCK"} // length를 빈칸으로 해줌으로써 Slice 객체 생성
-	names = append(names, "HARRY4DUCK")            // append arguments: Slice, 추가할 요소
-	fmt.Println(names)
+	harry := map[string]string{"name": "SCD", "age": "18"} // map의 key와 value 값을 string으로 지정
+
+	for key, value := range harry {
+		fmt.Println(key, value)
+	}
 }
