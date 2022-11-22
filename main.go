@@ -6,10 +6,19 @@ import (
 	"fmt"
 )
 
-func main() {
-	harry := map[string]string{"name": "SCD", "age": "18"} // map의 key와 value 값을 string으로 지정
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
 
-	for key, value := range harry {
-		fmt.Println(key, value)
-	}
+func main() {
+	favFood := []string{"steak", "pasta"}
+	age := 26
+	name := "HARRY"
+
+	harry := person{name: name, age: age, favFood: favFood}
+
+	fmt.Println(harry.name, harry.age, harry.favFood)
+
 }
