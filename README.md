@@ -1,4 +1,4 @@
-# Practice-Golang: Go를 활용한 Scrapper 생성
+# Learn Golang
 Practice Golang: https://nomadcoders.co/go-for-beginners
 
 ## The Strengths of Golang
