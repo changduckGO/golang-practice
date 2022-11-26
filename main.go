@@ -10,12 +10,14 @@ import (
 func main() {
 	account := accounts.NewAccount("harry")
 	account.Deposit(100)
-	fmt.Print(account.Balance())
 
-	err := account.Withdraw(120)
+	err := account.Withdraw(20)
 	if err != nil {
 		log.Fatalln(err) // Prinln() 후 프로그램 종료
 	}
 
-	fmt.Println(account.Balance())
+	account.ChangeOwner("SCD")
+
+	fmt.Println(account.Balance(), account.Owner())
+	fmt.Println(account)
 }

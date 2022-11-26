@@ -1,7 +1,10 @@
 // accounts는 컴파일하지 않을 것이므로 main() 사용하지 않음
 package accounts
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 // Account struct
 type Account struct {
@@ -32,7 +35,21 @@ func (a *Account) Withdraw(amount int) error {
 	return nil
 }
 
-// Balance of my account
+// Change of the account
+func (a *Account) ChangeOwner(newOwner string) {
+	a.owner = newOwner
+}
+
+// Balance of the account
 func (a Account) Balance() int {
 	return a.balance
+}
+
+// Owner of the account
+func (a Account) Owner() string {
+	return a.owner
+}
+
+func (a Account) String() string {
+	return fmt.Sprint(a.Owner(), "'s account.\nHas: ", a.Balance())
 }
