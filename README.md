@@ -1,5 +1,4 @@
 # Learn Golang
-Practice Golang: https://nomadcoders.co/go-for-beginners
 
 ## The Strengths of Golang
 1. Concurrency
