@@ -9,19 +9,19 @@ import (
 var errRequestFailed = errors.New("Request Failed")
 
 func main() {
-	channel := make(chan bool)
-	people := [2]string{"harry", "SCD"}
+	channel := make(chan string)
+	people := [5]string{"harry", "SCD", "CHAN", "DUCK", "HARRY POTTER"}
 
 	for _, person := range people {
 		go sexyCount(person, channel)
 	}
 
-	fmt.Println(<-channel)
-	fmt.Println(<-channel)
+	for i := 0; i < len(people); i++ {
+		fmt.Println(<-channel)
+	}
 }
 
-func sexyCount(person string, channel chan bool) {
+func sexyCount(person string, channel chan string) {
 	time.Sleep(time.Second * 5)
-	fmt.Println(person)
-	channel <- true
+	channel <- person + " is sexy"
 }
