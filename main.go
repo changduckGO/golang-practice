@@ -17,7 +17,8 @@ func main() {
 	}
 
 	for i := 0; i < len(people); i++ {
-		fmt.Println(<-channel)
+		fmt.Println(<-channel) // <-channel은 일종의 blocking operation
+		// 다시 말해서 main 함수에서 무언가를 받기 전까지는 동작을 멈춘다는 의미
 	}
 }
 
